@@ -1,10 +1,10 @@
 <?php
 
-namespace Airondev\Laravel2FA\Policies;
+namespace Hydrat\Laravel2FA\Policies;
 
 use Illuminate\Support\Facades\Cookie;
-use Airondev\Laravel2FA\Models\LoginAttempt;
-use Airondev\Laravel2FA\Policies\AbstractPolicy;
+use Hydrat\Laravel2FA\Models\LoginAttempt;
+use Hydrat\Laravel2FA\Policies\AbstractPolicy;
 
 class BrowserPolicy extends AbstractPolicy
 {

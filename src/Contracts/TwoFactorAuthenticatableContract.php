@@ -1,15 +1,15 @@
 <?php
 
-namespace Airondev\Laravel2FA\Contracts;
+namespace Hydrat\Laravel2FA\Contracts;
 
-use Airondev\Laravel2FA\Models\Token;
+use Hydrat\Laravel2FA\Models\Token;
 
 interface TwoFactorAuthenticatableContract
 {
     /**
      * Generates a new two-factor authentication token.
      *
-     * @return \Airondev\Laravel2FA\Models\Token
+     * @return \Hydrat\Laravel2FA\Models\Token
      */
     public function generateTwoFactorToken(): Token;
 

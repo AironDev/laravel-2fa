@@ -1,16 +1,16 @@
 <?php
 
-namespace Airondev\Laravel2FA;
+namespace Hydrat\Laravel2FA;
 
-use Airondev\Laravel2FA\Drivers\BaseDriver;
-use Airondev\Laravel2FA\Contracts\TwoFactorDriverContract;
+use Hydrat\Laravel2FA\Drivers\BaseDriver;
+use Hydrat\Laravel2FA\Contracts\TwoFactorDriverContract;
 
 class TwoFactorAuth
 {
     /**
      * Get the two-factor driver.
      *
-     * @return \Airondev\Laravel2FA\Contracts\TwoFactorDriverContract
+     * @return \Hydrat\Laravel2FA\Contracts\TwoFactorDriverContract
      */
     public static function getDriver(): TwoFactorDriverContract
     {

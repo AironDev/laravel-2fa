@@ -1,10 +1,10 @@
 <?php
 
-namespace Airondev\Laravel2FA\Contracts;
+namespace Hydrat\Laravel2FA\Contracts;
 
 use Illuminate\Http\Request;
-use Airondev\Laravel2FA\Models\LoginAttempt;
-use Airondev\Laravel2FA\Contracts\TwoFactorAuthenticatableContract;
+use Hydrat\Laravel2FA\Models\LoginAttempt;
+use Hydrat\Laravel2FA\Contracts\TwoFactorAuthenticatableContract;
 
 interface TwoFactorPolicyContract
 {

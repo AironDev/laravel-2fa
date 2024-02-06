@@ -6,8 +6,9 @@ use ReflectionClass;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
-use App\Http\Controllers\Auth\LoginController;
+// use App\Http\Controllers\Auth\LoginController;
 use Airondev\Laravel2FA\Drivers\BaseDriver as TwoFactorDriver;
+use App\Providers\RouteServiceProvider;
 
 class TwoFactorAuthController extends Controller
 {
@@ -56,7 +57,7 @@ class TwoFactorAuthController extends Controller
             
         TwoFactorDriver::make()->succeed($request, $user);
         
-        return redirect()->intended($this->redirectPath());
+        return redirect()->intended(RouteServiceProvider::HOME);
     }
 
     /**
@@ -76,13 +77,13 @@ class TwoFactorAuthController extends Controller
      *
      * @return string
      */
-    protected function redirectPath()
-    {
-        $reflection = new ReflectionClass(LoginController::class);
-        $loginController = $reflection->newInstanceWithoutConstructor();
+    // protected function redirectPath()
+    // {
+    //     $reflection = new ReflectionClass(LoginController::class);
+    //     $loginController = $reflection->newInstanceWithoutConstructor();
         
-        return $loginController->redirectPath();
-    }
+    //     return $loginController->redirectPath();
+    // }
     
     /**
      * Get the Autenticable model.

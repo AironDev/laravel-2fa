@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use Airondev\Laravel2FA\Controllers\TwoFactorAuthController;
+use Hydrat\Laravel2FA\Controllers\TwoFactorAuthController;
 
 /*
 |--------------------------------------------------------------------------

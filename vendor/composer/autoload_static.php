@@ -9,12 +9,12 @@ class ComposerStaticInitc18e2b88c2e6b5934adfab0e4e2aa52f
     public static $prefixLengthsPsr4 = array (
         'H' => 
         array (
-            'Airondev\\Laravel2FA\\' => 18,
+            'Hydrat\\Laravel2FA\\' => 18,
         ),
     );
 
     public static $prefixDirsPsr4 = array (
-        'Airondev\\Laravel2FA\\' => 
+        'Hydrat\\Laravel2FA\\' => 
         array (
             0 => __DIR__ . '/../..' . '/src',
         ),

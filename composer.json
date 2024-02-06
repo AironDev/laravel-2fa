@@ -16,12 +16,12 @@
     "authors": [
         {
             "name": "Thomas",
-            "email": "thomas@Airondev.agency"
+            "email": "thomas@hydrat.agency"
         }
     ],
     "autoload": {
         "psr-4": {
-            "Airondev\\Laravel2FA\\": "src/"
+            "Hydrat\\Laravel2FA\\": "src/"
         }
     },
     "minimum-stability": "dev",
@@ -31,7 +31,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Airondev\\Laravel2FA\\Laravel2FAServiceProvider"
+                "Hydrat\\Laravel2FA\\Laravel2FAServiceProvider"
             ]
         }
     }

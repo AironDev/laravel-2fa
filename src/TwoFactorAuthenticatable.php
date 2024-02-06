@@ -1,15 +1,15 @@
 <?php
 
-namespace Airondev\Laravel2FA;
+namespace Hydrat\Laravel2FA;
 
-use Airondev\Laravel2FA\Models\Token;
+use Hydrat\Laravel2FA\Models\Token;
 
 trait TwoFactorAuthenticatable
 {
     /**
      * Generates a new two-factor authentication token.
      *
-     * @return \Airondev\Laravel2FA\Models\Token
+     * @return \Hydrat\Laravel2FA\Models\Token
      */
     public function generateTwoFactorToken(): Token
     {

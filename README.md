@@ -1,8 +1,8 @@
 # Laravel Two-Factor Authentication
 
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/Airondev-agency/laravel-2fa.svg?style=flat-square)](https://packagist.org/packages/Airondev-agency/laravel-2fa)
-[![Total Downloads](https://img.shields.io/packagist/dt/Airondev-agency/laravel-2fa.svg?style=flat-square)](https://packagist.org/packages/Airondev-agency/laravel-2fa)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/hydrat-agency/laravel-2fa.svg?style=flat-square)](https://packagist.org/packages/hydrat-agency/laravel-2fa)
+[![Total Downloads](https://img.shields.io/packagist/dt/hydrat-agency/laravel-2fa.svg?style=flat-square)](https://packagist.org/packages/hydrat-agency/laravel-2fa)
 
 - [Introduction](#introduction)
 - [Installation](#installation)
@@ -31,7 +31,7 @@ This package was inspired by the [srmklive/laravel-twofactor-authentication](htt
 1. Use composer to install the package :  
 
 ```bash
-composer require Airondev-agency/laravel-2fa
+composer require hydrat-agency/laravel-2fa
 ```
 
 2. Add the service provider to your `providers` array in `config/app.php` file like so: 
@@ -42,14 +42,14 @@ composer require Airondev-agency/laravel-2fa
     /*
      * Package Service Providers...
      */
-    Airondev\Laravel2FA\Laravel2FAServiceProvider::class,
+    Hydrat\Laravel2FA\Laravel2FAServiceProvider::class,
 ],
 ```
 
 3. Run the following command to publish assets :
 
 ```bash
-php artisan vendor:publish --provider "Airondev\Laravel2FA\Laravel2FAServiceProvider"
+php artisan vendor:publish --provider "Hydrat\Laravel2FA\Laravel2FAServiceProvider"
 ```
 
 4. Run the following command to migrate database :
@@ -63,8 +63,8 @@ php artisan migrate
  - Before the class declaration, add these lines:
 
 ```php
-use Airondev\Laravel2FA\TwoFactorAuthenticatable;
-use Airondev\Laravel2FA\Contracts\TwoFactorAuthenticatableContract;
+use Hydrat\Laravel2FA\TwoFactorAuthenticatable;
+use Hydrat\Laravel2FA\Contracts\TwoFactorAuthenticatableContract;
 ```
 
  - Alter the class definition to implements the `TwoFactorAuthenticatableContract` contract :
@@ -93,7 +93,7 @@ use Authenticatable,
 
 namespace App\Http\Controllers\Auth;
 
-use Airondev\Laravel2FA\TwoFactorAuth;
+use Hydrat\Laravel2FA\TwoFactorAuth;
 
 class LoginController extends Controller
 {
@@ -227,7 +227,7 @@ You can extend this notification and configure other channels such as [SMS](http
 
 namespace App\Notifications;
 
-use Airondev\Laravel2FA\Notifications\TwoFactorToken as BaseTwoFactorToken;
+use Hydrat\Laravel2FA\Notifications\TwoFactorToken as BaseTwoFactorToken;
 
 class TwoFactorToken extends BaseTwoFactorToken
 {
@@ -291,7 +291,7 @@ To overwrite an existing policy, you may directly extend the policy class :
 
 namespace App\Auth\Policies;
 
-use Airondev\Laravel2FA\Policies\IpPolicy as BaseIpPolicy;
+use Hydrat\Laravel2FA\Policies\IpPolicy as BaseIpPolicy;
 
 class IpPolicy extends BaseIpPolicy
 {
@@ -338,7 +338,7 @@ return [
 ];
 ``` 
 
-ℹ️ The [AbstractPolicy](https://github.com/Airondev-Agency/laravel-2fa/blob/main/src/Policies/AbstractPolicy.php) has 3 available properties your may use to build your Policy check in the `passes()` method :  
+ℹ️ The [AbstractPolicy](https://github.com/Hydrat-Agency/laravel-2fa/blob/main/src/Policies/AbstractPolicy.php) has 3 available properties your may use to build your Policy check in the `passes()` method :  
 
 ```php
 /**
@@ -351,14 +351,14 @@ protected $request = null;
 /**
  * The user that just loggued in.
  * 
- * @var \Airondev\Laravel2FA\Contracts\TwoFactorAuthenticatableContract
+ * @var \Hydrat\Laravel2FA\Contracts\TwoFactorAuthenticatableContract
  */
 protected $user = null;
 
 /**
  * The login attempt, with UID and IP address data.
  * 
- * @var \Airondev\Laravel2FA\Models\LoginAttempt
+ * @var \Hydrat\Laravel2FA\Models\LoginAttempt
  */
 protected $attempt = null;
 ```
@@ -371,7 +371,7 @@ Creating a policy is trivial. For example, let's say your user might activate 2F
 
 namespace App\Auth\Policies;
 
-use Airondev\Laravel2FA\Policies\AbstractPolicy;
+use Hydrat\Laravel2FA\Policies\AbstractPolicy;
 
 class ActivePolicy extends AbstractPolicy
 {
@@ -407,7 +407,7 @@ You may also have different checks which results in different `$reason` messages
 
 namespace App\Auth\Policies;
 
-use Airondev\Laravel2FA\Policies\AbstractPolicy;
+use Hydrat\Laravel2FA\Policies\AbstractPolicy;
 
 class ActivePolicy extends AbstractPolicy
 {
@@ -506,8 +506,8 @@ If you need more flexibility in the whole process, you can extend the `BaseDrive
 ```php
 namespace App\Auth\Drivers;
 
-use Airondev\Laravel2FA\Drivers\BaseDriver;
-use Airondev\Laravel2FA\Contracts\TwoFactorAuthenticatableContract as Authenticatable;
+use Hydrat\Laravel2FA\Drivers\BaseDriver;
+use Hydrat\Laravel2FA\Contracts\TwoFactorAuthenticatableContract as Authenticatable;
 
 class CustomDriver extends BaseDriver
 {
@@ -515,7 +515,7 @@ class CustomDriver extends BaseDriver
      * Check if must trigger 2FA token for this user.
      *
      * @param \Illuminate\Http\Request $request
-     * @param \Airondev\Laravel2FA\Contracts\TwoFactorAuthenticatableContract $user
+     * @param \Hydrat\Laravel2FA\Contracts\TwoFactorAuthenticatableContract $user
      *
      * @return bool
      */
@@ -535,7 +535,7 @@ return [
 ];
 ``` 
 
-⚠️ If you wish to build a driver from scratch, you MUST implement the [TwoFactorDriverContract](https://github.com/Airondev-Agency/laravel-2fa/blob/main/src/Contracts/TwoFactorDriverContract.php).  
+⚠️ If you wish to build a driver from scratch, you MUST implement the [TwoFactorDriverContract](https://github.com/Hydrat-Agency/laravel-2fa/blob/main/src/Contracts/TwoFactorDriverContract.php).  
 
 
 <a name="contribute"></a>
@@ -543,7 +543,7 @@ return [
 ## Contribute
 
 Feel free to contribute to the package !  
-If you find any security issue, please contact me at thomas@Airondev.agency instead of creating a public github issue.  
+If you find any security issue, please contact me at thomas@hydrat.agency instead of creating a public github issue.  
 
 [First contribution guide](https://github.com/firstcontributions/first-contributions/blob/master/README.md)
 

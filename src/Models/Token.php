@@ -1,6 +1,6 @@
 <?php
 
-namespace Airondev\Laravel2FA\Models;
+namespace Hydrat\Laravel2FA\Models;
 
 use App\User;
 use Illuminate\Database\Eloquent\Model;

@@ -1,6 +1,6 @@
 <?php
 
-namespace Airondev\Laravel2FA\Exceptions;
+namespace Hydrat\Laravel2FA\Exceptions;
 
 use Exception;
 

@@ -1,12 +1,12 @@
 <?php
 
-namespace Airondev\Laravel2FA\Models;
+namespace Hydrat\Laravel2FA\Models;
 
 use App\User;
 use Illuminate\Support\Str;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Airondev\Laravel2FA\Contracts\TwoFactorAuthenticatableContract;
+use Hydrat\Laravel2FA\Contracts\TwoFactorAuthenticatableContract;
 
 class LoginAttempt extends Model
 {
@@ -57,7 +57,7 @@ class LoginAttempt extends Model
     /**
      * Create a new login attempt for the given user.
      *
-     * @param \Airondev\Laravel2FA\Contracts\TwoFactorAuthenticatableContract $user
+     * @param \Hydrat\Laravel2FA\Contracts\TwoFactorAuthenticatableContract $user
      *
      * @return static
      */
