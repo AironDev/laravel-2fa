@@ -1,0 +1,38 @@
+{
+    "name": "hydrat-agency/laravel-2fa",
+    "description": "This package allow you to enable two-factor authentication in your Laravel applications. It stores tokens locally and notify users about their token via mail, SMS or any custom channel. Includes native conditionnal check to trigger or not 2FA, using known devices, IP addresses or IP locations.",
+    "type": "library",
+    "version": "1.1.2",
+    "keywords": [
+        "laravel",
+        "laravel-package",
+        "auth",
+        "authorization",
+        "login",
+        "tow-factor",
+        "suspicius login"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Thomas",
+            "email": "thomas@hydrat.agency"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Hydrat\\Laravel2FA\\": "src/"
+        }
+    },
+    "minimum-stability": "dev",
+    "require": {
+        "php": "^7.3|^7.4|^8.0"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Hydrat\\Laravel2FA\\Laravel2FAServiceProvider"
+            ]
+        }
+    }
+}
