@@ -1,10 +1,10 @@
 <?php
 
-namespace Hydrat\Laravel2FA\Contracts;
+namespace Airondev\Laravel2FA\Contracts;
 
 use Illuminate\Http\Request;
-use Hydrat\Laravel2FA\Models\Token;
-use Hydrat\Laravel2FA\Contracts\TwoFactorAuthenticatableContract as Authenticatable;
+use Airondev\Laravel2FA\Models\Token;
+use Airondev\Laravel2FA\Contracts\TwoFactorAuthenticatableContract as Authenticatable;
 
 interface TwoFactorDriverContract
 {
@@ -13,7 +13,7 @@ interface TwoFactorDriverContract
      * If so, trigger it and return a redirect response, else return null.
      *
      * @param \Illuminate\Http\Request $request
-     * @param \Hydrat\Laravel2FA\Contracts\TwoFactorAuthenticatableContract $user
+     * @param \Airondev\Laravel2FA\Contracts\TwoFactorAuthenticatableContract $user
      *
      * @return Illuminate\Http\RedirectResponse|null
      */
@@ -24,7 +24,7 @@ interface TwoFactorDriverContract
      * Check if must trigger 2FA token for this user.
      *
      * @param \Illuminate\Http\Request $request
-     * @param \Hydrat\Laravel2FA\Contracts\TwoFactorAuthenticatableContract $user
+     * @param \Airondev\Laravel2FA\Contracts\TwoFactorAuthenticatableContract $user
      *
      * @return bool
      */
@@ -35,7 +35,7 @@ interface TwoFactorDriverContract
      * Trigger 2FA token for this user and redirect the the 2FA token submit page.
      *
      * @param \Illuminate\Http\Request $request
-     * @param \Hydrat\Laravel2FA\Contracts\TwoFactorAuthenticatableContract $user
+     * @param \Airondev\Laravel2FA\Contracts\TwoFactorAuthenticatableContract $user
      *
      * @return Illuminate\Http\RedirectResponse
      */
@@ -45,8 +45,8 @@ interface TwoFactorDriverContract
     /**
      * Notify the user about his created token.
      *
-     * @param \Hydrat\Laravel2FA\Contracts\TwoFactorAuthenticatableContract $user
-     * @param \Hydrat\Laravel2FA\Models\Token $token
+     * @param \Airondev\Laravel2FA\Contracts\TwoFactorAuthenticatableContract $user
+     * @param \Airondev\Laravel2FA\Models\Token $token
      *
      * @return void
      */
@@ -56,7 +56,7 @@ interface TwoFactorDriverContract
     /**
      * Check if the given token is valid for the given user.
      *
-     * @param \Hydrat\Laravel2FA\Contracts\TwoFactorAuthenticatableContract $user
+     * @param \Airondev\Laravel2FA\Contracts\TwoFactorAuthenticatableContract $user
      * @param string $token
      *
      * @return bool
@@ -70,7 +70,7 @@ interface TwoFactorDriverContract
      * Also validates the Login attempt.
      *
      * @param \Illuminate\Http\Request $request
-     * @param \Hydrat\Laravel2FA\Contracts\TwoFactorAuthenticatableContract $user Optionnal.
+     * @param \Airondev\Laravel2FA\Contracts\TwoFactorAuthenticatableContract $user Optionnal.
      *
      * @return void
      */

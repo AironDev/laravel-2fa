@@ -1,6 +1,6 @@
 <?php return array(
     'root' => array(
-        'name' => 'hydrat-agency/laravel-2fa',
+        'name' => 'Airondev-agency/laravel-2fa',
         'pretty_version' => '1.1.2',
         'version' => '1.1.2.0',
         'reference' => NULL,
@@ -10,7 +10,7 @@
         'dev' => true,
     ),
     'versions' => array(
-        'hydrat-agency/laravel-2fa' => array(
+        'Airondev-agency/laravel-2fa' => array(
             'pretty_version' => '1.1.2',
             'version' => '1.1.2.0',
             'reference' => NULL,

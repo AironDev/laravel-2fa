@@ -1,11 +1,11 @@
 <?php
 
-namespace Hydrat\Laravel2FA\Policies;
+namespace Airondev\Laravel2FA\Policies;
 
 use Illuminate\Http\Request;
-use Hydrat\Laravel2FA\Models\LoginAttempt;
-use Hydrat\Laravel2FA\Contracts\TwoFactorPolicyContract;
-use Hydrat\Laravel2FA\Contracts\TwoFactorAuthenticatableContract;
+use Airondev\Laravel2FA\Models\LoginAttempt;
+use Airondev\Laravel2FA\Contracts\TwoFactorPolicyContract;
+use Airondev\Laravel2FA\Contracts\TwoFactorAuthenticatableContract;
 
 abstract class AbstractPolicy implements TwoFactorPolicyContract
 {
@@ -19,14 +19,14 @@ abstract class AbstractPolicy implements TwoFactorPolicyContract
     /**
      * The user that just loggued in.
      *
-     * @var \Hydrat\Laravel2FA\Contracts\TwoFactorAuthenticatableContract
+     * @var \Airondev\Laravel2FA\Contracts\TwoFactorAuthenticatableContract
      */
     protected $user = null;
 
     /**
      * The login attempt, with UID and IP address data.
      *
-     * @var \Hydrat\Laravel2FA\Models\LoginAttempt
+     * @var \Airondev\Laravel2FA\Models\LoginAttempt
      */
     protected $attempt = null;
 
@@ -41,8 +41,8 @@ abstract class AbstractPolicy implements TwoFactorPolicyContract
      * The class constructor.
      *
      * @param \Illuminate\Http\Request $request
-     * @param \Hydrat\Laravel2FA\Contracts\TwoFactorPolicyContract $user
-     * @param \Hydrat\Laravel2FA\Models\LoginAttempt $attempt
+     * @param \Airondev\Laravel2FA\Contracts\TwoFactorPolicyContract $user
+     * @param \Airondev\Laravel2FA\Models\LoginAttempt $attempt
      *
      * @return void
      */

@@ -1,13 +1,13 @@
 <?php
 
-namespace Hydrat\Laravel2FA\Controllers;
+namespace Airondev\Laravel2FA\Controllers;
 
 use ReflectionClass;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\Auth\LoginController;
-use Hydrat\Laravel2FA\Drivers\BaseDriver as TwoFactorDriver;
+use Airondev\Laravel2FA\Drivers\BaseDriver as TwoFactorDriver;
 
 class TwoFactorAuthController extends Controller
 {

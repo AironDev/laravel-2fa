@@ -6,5 +6,5 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname($vendorDir);
 
 return array(
-    'Hydrat\\Laravel2FA\\' => array($baseDir . '/src'),
+    'Airondev\\Laravel2FA\\' => array($baseDir . '/src'),
 );

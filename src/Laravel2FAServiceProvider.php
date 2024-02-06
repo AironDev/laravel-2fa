@@ -1,6 +1,6 @@
 <?php
 
-namespace Hydrat\Laravel2FA;
+namespace Airondev\Laravel2FA;
 
 use Illuminate\Support\ServiceProvider;
 

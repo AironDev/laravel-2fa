@@ -1,8 +1,8 @@
 <?php
 
-namespace Hydrat\Laravel2FA\Policies;
+namespace Airondev\Laravel2FA\Policies;
 
-use Hydrat\Laravel2FA\Policies\AbstractPolicy;
+use Airondev\Laravel2FA\Policies\AbstractPolicy;
 
 class AlwaysPolicy extends AbstractPolicy
 {
