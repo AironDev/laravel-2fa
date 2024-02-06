@@ -1,17 +1,17 @@
 <?php
 
-namespace Hydrat\Laravel2FA\Drivers;
+namespace Airondev\Laravel2FA\Drivers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Collection;
-use Hydrat\Laravel2FA\Models\Token;
+use Airondev\Laravel2FA\Models\Token;
 use Illuminate\Support\Facades\Auth;
-use Hydrat\Laravel2FA\Models\LoginAttempt;
-use Hydrat\Laravel2FA\Notifications\TwoFactorToken;
-use Hydrat\Laravel2FA\Contracts\TwoFactorDriverContract;
-use Hydrat\Laravel2FA\Contracts\TwoFactorPolicyContract;
-use Hydrat\Laravel2FA\Exceptions\InvalidPolicyException;
-use Hydrat\Laravel2FA\Contracts\TwoFactorAuthenticatableContract as Authenticatable;
+use Airondev\Laravel2FA\Models\LoginAttempt;
+use Airondev\Laravel2FA\Notifications\TwoFactorToken;
+use Airondev\Laravel2FA\Contracts\TwoFactorDriverContract;
+use Airondev\Laravel2FA\Contracts\TwoFactorPolicyContract;
+use Airondev\Laravel2FA\Exceptions\InvalidPolicyException;
+use Airondev\Laravel2FA\Contracts\TwoFactorAuthenticatableContract as Authenticatable;
 
 class BaseDriver implements TwoFactorDriverContract
 {
@@ -30,7 +30,7 @@ class BaseDriver implements TwoFactorDriverContract
      * If so, trigger it and return a redirect response, else return null.
      *
      * @param \Illuminate\Http\Request $request
-     * @param \Hydrat\Laravel2FA\Contracts\TwoFactorAuthenticatableContract $user
+     * @param \Airondev\Laravel2FA\Contracts\TwoFactorAuthenticatableContract $user
      *
      * @return Illuminate\Http\RedirectResponse|null
      */
@@ -45,7 +45,7 @@ class BaseDriver implements TwoFactorDriverContract
      * Check if must trigger 2FA token for this user.
      *
      * @param \Illuminate\Http\Request $request
-     * @param \Hydrat\Laravel2FA\Contracts\TwoFactorAuthenticatableContract $user
+     * @param \Airondev\Laravel2FA\Contracts\TwoFactorAuthenticatableContract $user
      *
      * @return bool
      */
@@ -75,7 +75,7 @@ class BaseDriver implements TwoFactorDriverContract
      * Trigger 2FA token for this user and redirect the the 2FA token submit page.
      *
      * @param \Illuminate\Http\Request $request
-     * @param \Hydrat\Laravel2FA\Contracts\TwoFactorAuthenticatableContract $user
+     * @param \Airondev\Laravel2FA\Contracts\TwoFactorAuthenticatableContract $user
      *
      * @return Illuminate\Http\RedirectResponse
      */
@@ -100,8 +100,8 @@ class BaseDriver implements TwoFactorDriverContract
     /**
      * Notify the user about his created token.
      *
-     * @param \Hydrat\Laravel2FA\Contracts\TwoFactorAuthenticatableContract $user
-     * @param \Hydrat\Laravel2FA\Models\Token $token
+     * @param \Airondev\Laravel2FA\Contracts\TwoFactorAuthenticatableContract $user
+     * @param \Airondev\Laravel2FA\Models\Token $token
      *
      * @return void
      */
@@ -115,7 +115,7 @@ class BaseDriver implements TwoFactorDriverContract
     /**
      * Check if the given token is valid for the given user.
      *
-     * @param \Hydrat\Laravel2FA\Contracts\TwoFactorAuthenticatableContract $user
+     * @param \Airondev\Laravel2FA\Contracts\TwoFactorAuthenticatableContract $user
      * @param string $token
      *
      * @return bool
@@ -134,7 +134,7 @@ class BaseDriver implements TwoFactorDriverContract
      * Also validates the Login attempt.
      *
      * @param \Illuminate\Http\Request $request
-     * @param \Hydrat\Laravel2FA\Contracts\TwoFactorAuthenticatableContract $user Optionnal.
+     * @param \Airondev\Laravel2FA\Contracts\TwoFactorAuthenticatableContract $user Optionnal.
      *
      * @return void
      */

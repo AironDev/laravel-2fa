@@ -1,6 +1,6 @@
 <?php
 
-namespace Hydrat\Laravel2FA\Notifications;
+namespace Airondev\Laravel2FA\Notifications;
 
 use Illuminate\Notifications\Notification;
 use Illuminate\Notifications\Messages\MailMessage;
